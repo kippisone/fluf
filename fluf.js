@@ -1,22 +1,25 @@
-var Obj = function(obj) {
-  this.__obj = obj;
-}
+var FlufArray = require('./lib/fluf-array');
+var FlufObject = require('./lib/fluf-object');
+var FlufString = require('./lib/fluf-string');
 
-Obj.prototype.get = function (key) {
-	var obj = this.__obj;
+module.exports = function fluf(input) {
+  if (typeof input === 'object') {
+    if (Array.isArray(input)) {
+      return new FlufArray(input);
+    }
 
-	if (!key) {
-		return obj;
-	}
+    if (input !== null) {
+      return new FlufObject(input)
+    }
+  }
 
-	var keys = key.split('.');
-	for (var i = 0, len = keys.length; i < len; i++) {
-		if (!obj.hasOwnProperty(k)) {
-			return undefined;
-		}
+  if (typeof input === 'string') {
+    return new FlufString(input);
+  }
 
-		obj = obj[k];
-	}
+  return input;
 };
 
-module.exports.Obj = Obj
+module.exports.Arr = FlufArray;
+module.exports.Obj = FlufObject;
+module.exports.Str = FlufString;
