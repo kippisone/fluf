@@ -1,6 +1,6 @@
 {
   "name": "fluf",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Extends Javascript with usefull features",
   "main": "fluf.js",
   "author": "Andi Heinkelein <andifeind@noname-media.com>",
