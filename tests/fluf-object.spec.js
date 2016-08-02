@@ -14,6 +14,36 @@ describe('fluf.Obj', function() {
     });
   });
 
+  describe('toJSON()', function() {
+    it('Returns an object as json', function() {
+      let obj = new Obj({
+        foo: 'bar'
+      });
+
+      inspect(obj.toJSON()).isEql({
+        foo: 'bar'
+      });
+    });
+  });
+
+  describe('stringify()', function() {
+    it('Returns object as stringified json', function() {
+      let obj = new Obj({
+        foo: 'bar'
+      });
+
+      inspect(obj.stringify()).isEql('{"foo":"bar"}');
+    });
+
+    it('Returns object as formated stringified json', function() {
+      let obj = new Obj({
+        foo: 'bar'
+      });
+
+      inspect(obj.stringify(true)).isEql('{\n  "foo": "bar"\n}');
+    });
+  });
+
   describe('walk()', function() {
     it('Walks recursive through an object', function() {
       let obj = new Obj({
