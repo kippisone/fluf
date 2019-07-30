@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/Andifeind/fluf#readme",
   "devDependencies": {
-    "inspect.js": "^1.2.0",
-    "lagoon-reporter": "^0.2.1",
-    "mocha": "^2.5.3"
+    "inspect.js": "^1.11.8",
+    "lagoon-reporter": "^0.7.4",
+    "mocha": "^6.2.0"
   },
   "dependencies": {
-    "diff": "^2.2.3"
+    "diff": "^4.0.1"
   }
 }
