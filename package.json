@@ -19,7 +19,7 @@
   "devDependencies": {
     "inspect.js": "^1.11.8",
     "lagoon-reporter": "^0.7.4",
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "diff": "^4.0.1"
